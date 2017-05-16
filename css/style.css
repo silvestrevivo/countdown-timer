@@ -23,7 +23,23 @@ svg{
   width: 90%;
   display: block;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 7%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px grey;
+  margin-bottom: 30px;
+}
+
+form{
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
+  color: #122e79;
+}
+
+input{
+  border: 2px solid #122e79;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px auto;
 }
 
 footer{
