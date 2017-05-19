@@ -73,7 +73,7 @@
         .attr('transform', 'translate(90, 120)')
         .attr("fill", "url(#svgGradient)")
         .text('0')
-        .style('font-size',80)
+        .style('font-size','80px')
         .style('font-family', 'Verdana, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
@@ -85,7 +85,7 @@
         //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('dagen')
-        .style('font-size', 30)
+        .style('font-size', '30px')
         .style('font-family', 'Verdana')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
@@ -122,7 +122,7 @@
         .attr('transform', 'translate(90, 120)')
         .attr("fill", "url(#svgGradient)")
         .text('0')
-        .style('font-size',80)
+        .style('font-size','80px')
         .style('font-family', 'Verdana, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
@@ -133,7 +133,7 @@
         .attr('transform', 'translate(90, 250)')
         .attr("fill", "url(#svgGradient)")
         .text('uur')
-        .style('font-size', 30)
+        .style('font-size', '30px')
         .style('font-family', 'Verdana')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
@@ -168,7 +168,7 @@
         .attr('transform', 'translate(90, 120)')
         .attr("fill", "url(#svgGradient)")
         .text('0')
-        .style('font-size',80)
+        .style('font-size','80px')
         .style('font-family', 'Verdana, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
@@ -180,7 +180,7 @@
         //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('minuten')
-        .style('font-size', 30)
+        .style('font-size', '30px')
         .style('font-family', 'Verdana')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
@@ -219,7 +219,7 @@
         //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('0')
-        .style('font-size',80)
+        .style('font-size','80px')
         .style('font-family', 'Verdana, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
@@ -231,7 +231,7 @@
         //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('verkopen')
-        .style('font-size', 30)
+        .style('font-size', '30px')
         .style('font-family', 'Verdana')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
@@ -239,6 +239,8 @@
 
   var shape = document.querySelector('.circleBig1');
   //console.log(shape.getTotalLength());
+
+  //$( "#dateInput" ).datepicker({dateFormat: "yyyy-MM-dd"});
 
 })();
 
@@ -263,6 +265,13 @@ function animateValue(id, start, end, duration) {
 
 
 //ACTIONS AFTER SVG DISPLAY
+
+// $("#datepicker").datepicker({
+//     onSelect: function() {
+//         var dateObject = $(this).datepicker('getDate');
+//         console.log(dateObject);
+//     }
+// });
 
 //We listen de imput event
 var inputDate = document.querySelector('#dateInput');
