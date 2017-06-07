@@ -1,5 +1,28 @@
+/*font-face */
+@font-face{
+	font-family: 'Planer Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/Planer-Medium.otf');
+}
+@font-face{
+	font-family: 'Planer Bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/Planer-Bold.otf');
+}
+@font-face{
+	font-family: 'Planer MediumItalic';
+	font-style: italic;
+	font-weight: bold;
+	src: url('../fonts/Planer-MediumItalic.otf');
+}
+
+/*general style*/
 body, html{
   height: 100%;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:subpixel-antialiased;
 }
 
 body{
@@ -7,39 +30,56 @@ body{
   margin: 0;
   padding: 0;
   border: 1px solid transparent;
-  background-color: beige;
+  background-color: #0b2b46;
+}
+
+.gradient-text{
+  /*IE6-9 => Old browsers*/
+  color:#0084d6;
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fa53e', endColorstr='#0084d6', GradientType=0 );
+  background:#0084d6;
+  /*new browsers*/
+  background:-webkit-linear-gradient(legacy-direction(#39f4a8),#0084d6);
+  background:-webkit-gradient(linear,left top,left bottom,from(#39f4a8),to(#0084d6));
+  background:-webkit-linear-gradient(#39f4a8,#0084d6);background:linear-gradient(#39f4a8,#0084d6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.gradient-text-IE{
+  color:#0084d6;
+  background-color:transparent;
 }
 
 h1{
   text-align: center;
-  font-size: 50px;
-  font-family: 'Verdana', sans-serif;
+  font-size: 60px;
+  font-family: 'Planer MediumItalic', 'Ubuntu', sans-serif;
   text-transform: uppercase;
-  color: #1e5782;
-  text-shadow: 1px 1px 5px grey;
+  margin: 60px auto 0px auto;
 }
 
 svg{
   width: 90%;
   display: block;
   margin: 0 auto;
-  margin-top: 7%;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px grey;
+  margin-top: 6%;
   margin-bottom: 30px;
 }
 
 form{
   text-align: center;
-  font-family: 'Verdana', sans-serif;
-  color: #122e79;
+  font-family: 'Planer Medium', 'Ubuntu', sans-serif;
+  color: #39f4a8;
 }
 
 input{
-  border: 2px solid #122e79;
+  border: 2px solid #39f4a8;
   border-radius: 5px;
   padding: 5px;
   margin: 10px auto;
+  font-family: 'Planer Medium', 'Ubuntu', sans-serif;
+  color: #39f4a8;
+  background-color: #0b2b46;
 }
 
 footer{
@@ -48,15 +88,16 @@ footer{
   width: 100%;
   text-align: center;
   bottom: 10px;
-  font-family: 'Verdana', sans-serif;
-  color: #122e79;
+  font-family: 'Planer Medium', 'Ubuntu', sans-serif;
+  color: #0084d6;
 }
 
 footer a {
   text-decoration: none;
-  color: #122e79;
+  color: #0084d6;
 }
 
 footer a:hover{
   text-decoration: underline;
+  color: #39f4a8;
 }

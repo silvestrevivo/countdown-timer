@@ -1,3 +1,10 @@
+//Conditional voor IE < 8
+
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1 ){
+  $('h2.gradient-text').removeClass('gradient-text').addClass('gradient-text-IE');
+}
+
+
 //AutoCall function to display SVG
 (function countdownTimer(){
 
@@ -29,12 +36,12 @@
   gradient.append("stop")
      .attr('class', 'start')
      .attr("offset", "0%")
-     .attr("stop-color", "#10c73b")//green
+     .attr("stop-color", "#39f4a8")//green
      .attr("stop-opacity", 1);
   gradient.append("stop")
      .attr('class', 'end')
      .attr("offset", "100%")
-     .attr("stop-color", "#122e79") //blue
+     .attr("stop-color", "#0084d6") //blue
      .attr("stop-opacity", 1);
 
 
@@ -61,7 +68,6 @@
   //circleSmall
   circle1.append('path')
           .attr('d', lineCircle)
-          //.attr('stroke', 'blue')
           .attr("stroke", "url(#svgGradient)")
           .attr("fill", "none")
           .attr('stroke-width', 3)
@@ -74,7 +80,7 @@
         .attr("fill", "url(#svgGradient)")
         .text('0')
         .style('font-size','80px')
-        .style('font-family', 'Verdana, sans-serif')
+        .style('font-family', 'Planer Bold, Tahoma, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-counter')
@@ -82,11 +88,10 @@
   //Text Title
   circle1.append('text')
         .attr('transform', 'translate(90, 250)')
-        //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('dagen')
         .style('font-size', '30px')
-        .style('font-family', 'Verdana')
+        .style('font-family', 'Planer Medium, Tahoma, sans-serif')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
 
@@ -98,7 +103,6 @@
   //circleBig
   circle2.append('path')
           .attr('d', lineCircle)
-          //.attr('stroke', 'blue')
           .attr("stroke", "url(#svgGradient)")
           .attr("fill", "none")
           .attr('stroke-width', 3)
@@ -123,7 +127,7 @@
         .attr("fill", "url(#svgGradient)")
         .text('0')
         .style('font-size','80px')
-        .style('font-family', 'Verdana, sans-serif')
+        .style('font-family', 'Planer Bold, Tahoma, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-counter')
@@ -134,7 +138,7 @@
         .attr("fill", "url(#svgGradient)")
         .text('uur')
         .style('font-size', '30px')
-        .style('font-family', 'Verdana')
+        .style('font-family', 'Planer Medium, Tahoma, sans-serif')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
 
@@ -169,7 +173,7 @@
         .attr("fill", "url(#svgGradient)")
         .text('0')
         .style('font-size','80px')
-        .style('font-family', 'Verdana, sans-serif')
+        .style('font-family', 'Planer Bold, Tahoma, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-counter')
@@ -177,11 +181,10 @@
   //Text Title
   circle3.append('text')
         .attr('transform', 'translate(90, 250)')
-        //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('minuten')
         .style('font-size', '30px')
-        .style('font-family', 'Verdana')
+        .style('font-family', 'Planer Medium, Tahoma, sans-serif')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
 
@@ -193,7 +196,6 @@
   //reactangleBig
   rectangle.append('path')
           .attr('d', lineRectangle)
-          //.attr('stroke', 'blue')
           .attr("stroke", "url(#svgGradient)")
           .attr("fill", "none")
           .attr('stroke-width', 3)
@@ -208,7 +210,6 @@
           .attr('d', lineRectangle)
           .attr("stroke", "url(#svgGradient)")
           .attr("fill", "none")
-          //.attr('stroke', 'blue')
           .attr('stroke-width', 3)
           .attr('stroke-miterlimit', 3)
           .attr('fill', 'none')
@@ -216,11 +217,10 @@
   //Text Numer
   rectangle.append('text')
         .attr('transform', 'translate(155, 110)')
-        //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('0')
         .style('font-size','80px')
-        .style('font-family', 'Verdana, sans-serif')
+        .style('font-family', 'Planer Bold, Tahoma, sans-serif')
         .style('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-counter')
@@ -228,19 +228,16 @@
   //Text Title
   rectangle.append('text')
         .attr('transform', 'translate(150, 245)')
-        //.attr('fill', 'blue')
         .attr("fill", "url(#svgGradient)")
         .text('verkopen')
         .style('font-size', '30px')
-        .style('font-family', 'Verdana')
+        .style('font-family', 'Planer Medium, Tahoma, sans-serif')
         .attr('text-anchor', 'middle')
         .attr('class', 'text-title');
 
 
   var shape = document.querySelector('.circleBig1');
   //console.log(shape.getTotalLength());
-
-  //$( "#dateInput" ).datepicker({dateFormat: "yyyy-MM-dd"});
 
 })();
 
@@ -263,16 +260,6 @@ function animateValue(id, start, end, duration) {
 }
 
 
-
-//ACTIONS AFTER SVG DISPLAY
-
-// $("#datepicker").datepicker({
-//     onSelect: function() {
-//         var dateObject = $(this).datepicker('getDate');
-//         console.log(dateObject);
-//     }
-// });
-
 //We listen de imput event
 var inputDate = document.querySelector('#dateInput');
 inputDate.addEventListener('input', function(event){
@@ -285,13 +272,9 @@ inputDate.addEventListener('input', function(event){
   var distance = countDownDate - now;
   //results
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var hours = Math.floor(((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) - 2);
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  // console.log(days);
-  // console.log(hours);
-  // console.log(minutes);
-  // console.log(seconds);
 
   //set timer at zero
   $('#text-counter*').text('0');
