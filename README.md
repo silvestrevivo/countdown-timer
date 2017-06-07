@@ -1,2 +1,4 @@
 # countdown-timer
-Countdown timer with SVG and d3.js developed.
+Countdown timer developed with SVG and d3.js.
+
+Demo in https://silvestrevivo.github.io/countdown-timer/
